@@ -2,7 +2,7 @@
 Dump Android ROMs/Firmwares Online, via a PR, for free!
 
 ## How to Dump? ##
-1. Update ```ROM_URL.txt``` with the direct link of the ROM/Firmware and Make a PR.
+1. Update ```ROM_URLs.json``` with the direct links of the ROM/Firmware and Make a PR (Pull Request).
 2. As soon as you make a PR, the Dumping Should Start Automatically.
 3. If the Dumping is Successful, you'll see a post at out Channel, [@DumprXDumps](https://t.me/DumprXDumps) on Telegram.
 

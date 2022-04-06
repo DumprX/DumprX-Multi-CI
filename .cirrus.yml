@@ -12,7 +12,7 @@ env:
   PRIV_SSH_KEY: ENCRYPTED[f089734f7284794ec3d78e4fb239fd4e5a9b4db19173fb406d17b1788af1b9cc50e6b4b5c0e439bd7b2bd9feced489a8]
 
 task:
-  name: "Firmware Dump by DumprX"
+  name: "DumprX-1"
   only_if: $CIRRUS_REPO_OWNER == 'DumprX'
   skip: $CIRRUS_BRANCH == 'main'
   timeout_in: 120m
@@ -43,4 +43,106 @@ task:
 
   DumprX_script:
       - cd DumprX || echo "Already in the Directory"
-      - ./dumper.sh $(< ${CIRRUS_WORKING_DIR}/ROM_URL.txt)
+      - ./dumper.sh $(cat ../*.json | jq .\"1\")
+
+task:
+  name: "DumprX-2"
+  only_if: $CIRRUS_REPO_OWNER == 'DumprX'
+  skip: $CIRRUS_BRANCH == 'main'
+  timeout_in: 120m
+  container:
+      image: ghcr.io/sushrut1101/docker:arch
+      cpu: 4
+      memory: 16G
+
+  Clone_script:
+      - git clone --depth=1 --single-branch https://github.com/DumprX/DumprX.git
+  
+  Set-SSH-Keys_script:
+      - mkdir -p ~/.ssh
+      - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+      - ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
+      - echo "$PRIV_SSH_KEY" > ~/.ssh/id_rsa
+      - chmod 600 ~/.ssh/id_rsa
+
+  Setup_script:
+      - git config --global user.name "Sushrut1101"
+      - git config --global user.email "guptasushrut@gmail.com"
+      - cd DumprX
+      - echo "$GITLAB_TOKEN" > .gitlab_token
+      - echo "$GITLAB_GROUP" > .gitlab_group
+      - echo "$TG_CHAT" > .tg_chat
+      - echo "$TG_TOKEN" > .tg_token
+      - sudo bash setup.sh
+
+  DumprX_script:
+      - cd DumprX || echo "Already in the Directory"
+      - ./dumper.sh $(cat ../*.json | jq .\"2\")
+
+task:
+  name: "DumprX-3"
+  only_if: $CIRRUS_REPO_OWNER == 'DumprX'
+  skip: $CIRRUS_BRANCH == 'main'
+  timeout_in: 120m
+  container:
+      image: ghcr.io/sushrut1101/docker:arch
+      cpu: 4
+      memory: 16G
+
+  Clone_script:
+      - git clone --depth=1 --single-branch https://github.com/DumprX/DumprX.git
+  
+  Set-SSH-Keys_script:
+      - mkdir -p ~/.ssh
+      - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+      - ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
+      - echo "$PRIV_SSH_KEY" > ~/.ssh/id_rsa
+      - chmod 600 ~/.ssh/id_rsa
+
+  Setup_script:
+      - git config --global user.name "Sushrut1101"
+      - git config --global user.email "guptasushrut@gmail.com"
+      - cd DumprX
+      - echo "$GITLAB_TOKEN" > .gitlab_token
+      - echo "$GITLAB_GROUP" > .gitlab_group
+      - echo "$TG_CHAT" > .tg_chat
+      - echo "$TG_TOKEN" > .tg_token
+      - sudo bash setup.sh
+
+  DumprX_script:
+      - cd DumprX || echo "Already in the Directory"
+      - ./dumper.sh $(cat ../*.json | jq .\"3\")
+
+task:
+  name: "DumprX-4"
+  only_if: $CIRRUS_REPO_OWNER == 'DumprX'
+  skip: $CIRRUS_BRANCH == 'main'
+  timeout_in: 120m
+  container:
+      image: ghcr.io/sushrut1101/docker:arch
+      cpu: 4
+      memory: 16G
+
+  Clone_script:
+      - git clone --depth=1 --single-branch https://github.com/DumprX/DumprX.git
+  
+  Set-SSH-Keys_script:
+      - mkdir -p ~/.ssh
+      - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+      - ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
+      - echo "$PRIV_SSH_KEY" > ~/.ssh/id_rsa
+      - chmod 600 ~/.ssh/id_rsa
+
+  Setup_script:
+      - git config --global user.name "Sushrut1101"
+      - git config --global user.email "guptasushrut@gmail.com"
+      - cd DumprX
+      - echo "$GITLAB_TOKEN" > .gitlab_token
+      - echo "$GITLAB_GROUP" > .gitlab_group
+      - echo "$TG_CHAT" > .tg_chat
+      - echo "$TG_TOKEN" > .tg_token
+      - sudo bash setup.sh
+
+  DumprX_script:
+      - cd DumprX || echo "Already in the Directory"
+      - ./dumper.sh $(cat ../*.json | jq .\"4\")
