@@ -7,6 +7,7 @@ env:
   PUSH_TO_GITLAB: true
   GITLAB_GROUP: Android-Dumps
   GITLAB_TOKEN: ENCRYPTED[86ee4e92f3a156c35d43a8e6617dff5ef4fe83cdf6b46ae7060b55f96049d25a64d3e0b1f34e4166e5d33cf98d1cb60d]
+  GITLAB_INSTANCE: code.input.sh
 
   # Private SSH Key
   PRIV_SSH_KEY: ENCRYPTED[991b9f9111329b8e8135040d22ec23508a560304dac1ef13d515eef2cdef4c15bbfaf329403d55b913af2b74c9e08edb]
@@ -26,6 +27,7 @@ task:
   
   Set-SSH-Keys_script:
       - mkdir -p ~/.ssh
+      - ssh-keyscan -t rsa $GITLAB_INSTANCE >> ~/.ssh/known_hosts
       - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
       - ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
       - echo "$PRIV_SSH_KEY" > ~/.ssh/id_rsa
@@ -37,6 +39,7 @@ task:
       - cd DumprX
       - echo "$GITLAB_TOKEN" > .gitlab_token
       - echo "$GITLAB_GROUP" > .gitlab_group
+      - echo "$GITLAB_INSTANCE" > .gitlab_instance
       - echo "$TG_CHAT" > .tg_chat
       - echo "$TG_TOKEN" > .tg_token
       - sudo bash setup.sh
@@ -60,6 +63,7 @@ task:
   
   Set-SSH-Keys_script:
       - mkdir -p ~/.ssh
+      - ssh-keyscan -t rsa $GITLAB_INSTANCE >> ~/.ssh/known_hosts
       - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
       - ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
       - echo "$PRIV_SSH_KEY" > ~/.ssh/id_rsa
@@ -71,6 +75,7 @@ task:
       - cd DumprX
       - echo "$GITLAB_TOKEN" > .gitlab_token
       - echo "$GITLAB_GROUP" > .gitlab_group
+      - echo "$GITLAB_INSTANCE" > .gitlab_instance
       - echo "$TG_CHAT" > .tg_chat
       - echo "$TG_TOKEN" > .tg_token
       - sudo bash setup.sh
@@ -94,6 +99,7 @@ task:
   
   Set-SSH-Keys_script:
       - mkdir -p ~/.ssh
+      - ssh-keyscan -t rsa $GITLAB_INSTANCE >> ~/.ssh/known_hosts
       - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
       - ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
       - echo "$PRIV_SSH_KEY" > ~/.ssh/id_rsa
@@ -105,6 +111,7 @@ task:
       - cd DumprX
       - echo "$GITLAB_TOKEN" > .gitlab_token
       - echo "$GITLAB_GROUP" > .gitlab_group
+      - echo "$GITLAB_INSTANCE" > .gitlab_instance
       - echo "$TG_CHAT" > .tg_chat
       - echo "$TG_TOKEN" > .tg_token
       - sudo bash setup.sh
@@ -128,6 +135,7 @@ task:
   
   Set-SSH-Keys_script:
       - mkdir -p ~/.ssh
+      - ssh-keyscan -t rsa $GITLAB_INSTANCE >> ~/.ssh/known_hosts
       - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
       - ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
       - echo "$PRIV_SSH_KEY" > ~/.ssh/id_rsa
@@ -139,6 +147,7 @@ task:
       - cd DumprX
       - echo "$GITLAB_TOKEN" > .gitlab_token
       - echo "$GITLAB_GROUP" > .gitlab_group
+      - echo "$GITLAB_INSTANCE" > .gitlab_instance
       - echo "$TG_CHAT" > .tg_chat
       - echo "$TG_TOKEN" > .tg_token
       - sudo bash setup.sh
