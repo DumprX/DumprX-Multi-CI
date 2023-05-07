@@ -23,7 +23,8 @@ task:
 
   Clone_script:
       - git clone --depth=1 --single-branch https://github.com/DumprX/DumprX.git
-  
+      - pacman -S pip3
+      
   Set-SSH-Keys_script:
       - mkdir -p ~/.ssh
       - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
