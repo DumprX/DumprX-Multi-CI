@@ -17,7 +17,7 @@ task:
   skip: $CIRRUS_BRANCH == 'main'
   timeout_in: 120m
   container:
-      image: ghcr.io/sushrut1101/docker:arch
+      image: apon77/aosp:cirrus
       cpu: 4
       memory: 16G
 
@@ -51,7 +51,7 @@ task:
   skip: $CIRRUS_BRANCH == 'main'
   timeout_in: 120m
   container:
-      image: ghcr.io/sushrut1101/docker:arch
+      image: apon77/aosp:cirrus
       cpu: 4
       memory: 16G
 
@@ -85,7 +85,7 @@ task:
   skip: $CIRRUS_BRANCH == 'main'
   timeout_in: 120m
   container:
-      image: ghcr.io/sushrut1101/docker:arch
+      image: apon77/aosp:cirrus
       cpu: 4
       memory: 16G
 
@@ -119,7 +119,7 @@ task:
   skip: $CIRRUS_BRANCH == 'main'
   timeout_in: 120m
   container:
-      image: ghcr.io/sushrut1101/docker:arch
+      image: apon77/aosp:cirrus
       cpu: 4
       memory: 16G
 
