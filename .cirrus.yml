@@ -17,13 +17,13 @@ task:
   skip: $CIRRUS_BRANCH == 'main'
   timeout_in: 120m
   container:
-      image: ghcr.io/sushrut1101/docker:arch
+      image: ubuntu:latest 
       cpu: 4
       memory: 16G
 
   Clone_script:
       - git clone --depth=1 --single-branch https://github.com/DumprX/DumprX.git
-  
+      
   Set-SSH-Keys_script:
       - mkdir -p ~/.ssh
       - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
@@ -51,7 +51,7 @@ task:
   skip: $CIRRUS_BRANCH == 'main'
   timeout_in: 120m
   container:
-      image: ghcr.io/sushrut1101/docker:arch
+      image: ubuntu:latest 
       cpu: 4
       memory: 16G
 
@@ -85,7 +85,7 @@ task:
   skip: $CIRRUS_BRANCH == 'main'
   timeout_in: 120m
   container:
-      image: ghcr.io/sushrut1101/docker:arch
+      image: ubuntu:latest
       cpu: 4
       memory: 16G
 
@@ -119,7 +119,7 @@ task:
   skip: $CIRRUS_BRANCH == 'main'
   timeout_in: 120m
   container:
-      image: ghcr.io/sushrut1101/docker:arch
+      image: ubuntu:latest 
       cpu: 4
       memory: 16G
 
