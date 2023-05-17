@@ -16,8 +16,9 @@ task:
   only_if: $CIRRUS_REPO_OWNER == 'DumprX'
   skip: $CIRRUS_BRANCH == 'main'
   timeout_in: 120m
+  runs-on: ubuntu-latest
   container:
-      image: ghcr.io/sushrut1101/docker:arch
+      image: ghcr.io/sushrut1101/docker:latest 
       cpu: 4
       memory: 16G
 
@@ -50,8 +51,9 @@ task:
   only_if: $CIRRUS_REPO_OWNER == 'DumprX'
   skip: $CIRRUS_BRANCH == 'main'
   timeout_in: 120m
+  runs-on: ubuntu-latest
   container:
-      image: ghcr.io/sushrut1101/docker:arch
+      image: ghcr.io/sushrut1101/docker:latest 
       cpu: 4
       memory: 16G
 
@@ -84,8 +86,9 @@ task:
   only_if: $CIRRUS_REPO_OWNER == 'DumprX'
   skip: $CIRRUS_BRANCH == 'main'
   timeout_in: 120m
+  runs-on: ubuntu-latest
   container:
-      image: ghcr.io/sushrut1101/docker:arch
+      image: ghcr.io/sushrut1101/docker:latest 
       cpu: 4
       memory: 16G
 
@@ -118,8 +121,9 @@ task:
   only_if: $CIRRUS_REPO_OWNER == 'DumprX'
   skip: $CIRRUS_BRANCH == 'main'
   timeout_in: 120m
+  runs-on: ubuntu-latest
   container:
-      image: ghcr.io/sushrut1101/docker:arch
+      image: ghcr.io/sushrut1101/docker:latest 
       cpu: 4
       memory: 16G
 
