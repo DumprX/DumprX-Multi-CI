@@ -18,7 +18,7 @@ task:
   timeout_in: 120m
   runs-on: ubuntu-latest
   container:
-      image: ghcr.io/sushrut1101/docker:latest 
+      image: ubuntu-latest
       cpu: 4
       memory: 16G
 
