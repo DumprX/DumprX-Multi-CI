@@ -13,7 +13,7 @@ env:
 
 task:
   name: "DumprX-1"
-  only_if: $CIRRUS_REPO_OWNER == 'DumprX'
+  only_if: $CIRRUS_REPO_OWNER == 'SIDDK2406'
   skip: $CIRRUS_BRANCH == 'main'
   timeout_in: 120m
   container:
