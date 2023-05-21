@@ -40,8 +40,8 @@ task:
       - echo "$TG_CHAT" > .tg_chat
       - echo "$TG_TOKEN" > .tg_token
       - sudo bash setup.sh
-      - pip uninstall pycrypto
-      - pip install pycryptodome
+      - sudo pip uninstall pycrypto
+      - sudo pip install pycryptodome
 
   DumprX_script:
       - cd DumprX || echo "Already in the Directory"
@@ -76,6 +76,8 @@ task:
       - echo "$TG_CHAT" > .tg_chat
       - echo "$TG_TOKEN" > .tg_token
       - sudo bash setup.sh
+      - pip uninstall pycrypto
+      - pip install pycryptodome
 
   DumprX_script:
       - cd DumprX || echo "Already in the Directory"
