@@ -1,19 +1,6 @@
-env:
-  # Telegram
-  TG_CHAT: "@DumprXDumps"
-  TG_TOKEN: ENCRYPTED[2a89720bfbe3d4987b7957bfe6cb250027ccc85106ef5089ac5f335e4cd53b84795fba8b110e8c8888427a35088c9702]
-  
-  # Gitlab
-  PUSH_TO_GITLAB: true
-  GITLAB_GROUP: Android-Dumps
-  GITLAB_TOKEN: ENCRYPTED[86ee4e92f3a156c35d43a8e6617dff5ef4fe83cdf6b46ae7060b55f96049d25a64d3e0b1f34e4166e5d33cf98d1cb60d]
-
-  # Private SSH Key
-  PRIV_SSH_KEY: ENCRYPTED[991b9f9111329b8e8135040d22ec23508a560304dac1ef13d515eef2cdef4c15bbfaf329403d55b913af2b74c9e08edb]
-
 task:
   name: "DumprX-1"
-  only_if: $CIRRUS_REPO_OWNER == 'DumprX'
+  only_if: $CIRRUS_REPO_OWNER == 'SIDDK2406'
   skip: $CIRRUS_BRANCH == 'main'
   timeout_in: 120m
   container:
@@ -32,14 +19,16 @@ task:
       - chmod 600 ~/.ssh/id_rsa
 
   Setup_script:
-      - git config --global user.name "Sushrut1101"
-      - git config --global user.email "guptasushrut@gmail.com"
+      - git config --global user.name "SIDDK2406"
+      - git config --global user.email "skoyande24@gmail.com"
       - cd DumprX
       - echo "$GITLAB_TOKEN" > .gitlab_token
       - echo "$GITLAB_GROUP" > .gitlab_group
       - echo "$TG_CHAT" > .tg_chat
       - echo "$TG_TOKEN" > .tg_token
       - sudo bash setup.sh
+      - sudo pip uninstall pycrypto
+      - sudo pip install pycryptodome
 
   DumprX_script:
       - cd DumprX || echo "Already in the Directory"
@@ -66,14 +55,16 @@ task:
       - chmod 600 ~/.ssh/id_rsa
 
   Setup_script:
-      - git config --global user.name "Sushrut1101"
-      - git config --global user.email "guptasushrut@gmail.com"
+      - git config --global user.name "SIDDK2406"
+      - git config --global user.email "skoyande24@gmail.com"
       - cd DumprX
       - echo "$GITLAB_TOKEN" > .gitlab_token
       - echo "$GITLAB_GROUP" > .gitlab_group
       - echo "$TG_CHAT" > .tg_chat
       - echo "$TG_TOKEN" > .tg_token
       - sudo bash setup.sh
+      - pip uninstall pycrypto
+      - pip install pycryptodome
 
   DumprX_script:
       - cd DumprX || echo "Already in the Directory"
@@ -100,8 +91,8 @@ task:
       - chmod 600 ~/.ssh/id_rsa
 
   Setup_script:
-      - git config --global user.name "Sushrut1101"
-      - git config --global user.email "guptasushrut@gmail.com"
+      - git config --global user.name "SIDDK2406"
+      - git config --global user.email "skoyande24@gmail.com"
       - cd DumprX
       - echo "$GITLAB_TOKEN" > .gitlab_token
       - echo "$GITLAB_GROUP" > .gitlab_group
@@ -134,8 +125,8 @@ task:
       - chmod 600 ~/.ssh/id_rsa
 
   Setup_script:
-      - git config --global user.name "Sushrut1101"
-      - git config --global user.email "guptasushrut@gmail.com"
+      - git config --global user.name "SIDDK2406"
+      - git config --global user.email "skoyande24@gmail.com"
       - cd DumprX
       - echo "$GITLAB_TOKEN" > .gitlab_token
       - echo "$GITLAB_GROUP" > .gitlab_group
