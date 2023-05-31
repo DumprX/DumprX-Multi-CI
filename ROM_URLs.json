@@ -1,6 +1,6 @@
 {
-    "1":    "https://bigota.d.miui.com/V12.5.7.0.RJZEUXM/joyeuse_eea_global_images_V12.5.7.0.RJZEUXM_20220214.0000.00_11.0_eea_3f22584d1d.tgz",
-    "2":    "https://bigota.d.miui.com/V12.5.5.0.RJXINXM/excalibur_in_global_images_V12.5.5.0.RJXINXM_20220120.0000.00_11.0_in_8baaa3af77.tgz",
-    "3":    "https://bigota.d.miui.com/V13.0.5.0.RKEMIXM/fleur_global_images_V13.0.5.0.RKEMIXM_20220216.0000.00_11.0_global_311980d25a.tgz",
-    "4":    "https://bigota.d.miui.com/V12.0.22.0.QCDINXM/dandelion_in_global_images_V12.0.22.0.QCDINXM_20220211.0000.00_10.0_in_198e8e22bf.tgz"
+    "1":    "https://android.googleapis.com/packages/ota-api/package/46c0b6bebfc9ec4e9acaaa96d2f01030b9a13dc1.zip",
+    "2":    "https://android.googleapis.com/packages/ota-api/package/36fb644b09a52268b1770a4913e63e46364d81ad.zip",
+    "3":    "https://android.googleapis.com/packages/ota-api/package/b862c3d98e0c63159520188f09bfdd5b5c2d69e9.zip",
+    "4":    "https://android.googleapis.com/packages/ota-api/package/45027e71e67fac7982c3fee97f49ab608a504f1b.zip"
 }
